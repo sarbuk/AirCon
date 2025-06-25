@@ -211,7 +211,7 @@ async def run(parsed_args):
               },
           ],
           'precision': device.get_temp_precision(),
-          'temp_step': 1 if device.is_fahrenheit else 0.5,
+          'temp_step': 0.5,
           'temperature_unit': 'F' if device.is_fahrenheit else 'C'
       }
       topics = device.topics
