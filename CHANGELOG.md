@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [0.3.28](https://github.com/sarbuk/AirCon/compare/0.3.24...0.3.28)
+#### [0.3.29](https://github.com/sarbuk/AirCon/compare/0.3.24...0.3.29)
 > 25 June 2025
 
 - add temp_step = 0.5 to allow half degree increments in HA
