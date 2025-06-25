@@ -10,7 +10,7 @@ services:
   hisense_ac:
     depends_on:
       - copy_config
-    image: ghcr.io/sarbuk/aircon:0.3.27
+    build: .
     container_name: hisense_ac
     healthcheck:
       disable: true
