@@ -1,10 +1,11 @@
 {
   "name": "HiSense Air Conditioners",
-  "version": "0.3.28",
+  "version": "0.3.29",
   "slug": "hisense_ac",
   "description": "Interface for controlling Air Conditioners, e.g. with HiSense modules.",
   "url": "https://github.com/sarbuk/AirCon",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "build": true,
   "startup": "application",
   "boot": "auto",
   "host_network": true,
