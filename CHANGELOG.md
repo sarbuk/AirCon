@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
 #### [0.3.24](https://github.com/xury77/AirCon/compare/0.3.23...0.3.24)
+> 25 June 2025
+
+- add temp_step = 0.5 to allow half degree increments in HA
+- other changes due to forking from xury77
+
+#### [0.3.24](https://github.com/xury77/AirCon/compare/0.3.23...0.3.24)
 > 18 November 2024
 
 - fix FAN_ONLY as mentioned in [`#4`]
