@@ -192,6 +192,7 @@ async def run(parsed_args):
     mqtt_client.will_set(mqtt_topics['lwt'], payload='offline', retain=True)
     mqtt_client.connect(parsed_args.mqtt_host, parsed_args.mqtt_port)
     mqtt_client.publish(mqtt_topics['lwt'], payload='online', retain=True)
+    print(f"[DEBUG] Devices loaded: {len(devices)}", file=sys.stderr)
     for device in devices:
       config = {
           'unique_id': device.mac_address,
@@ -215,6 +216,17 @@ async def run(parsed_args):
           'temperature_unit': 'F' if device.is_fahrenheit else 'C'
       }
       topics = device.topics
+      # [PATCH] Extend topics manually for known-but-omitted features
+      fallback_keys = [
+        'economy_mode',
+        'powerful_mode',
+        'af_vertical_direction',
+        'outdoor_temperature',
+      ]
+      for key in fallback_keys:
+          if key not in topics:
+              topics[key] = key
+      print(f"[DEBUG] Patched topics for {device.name}: {topics.keys()}", file=sys.stderr)
       if 'env_temp' in topics:
         config['current_temperature_topic'] = mqtt_topics['pub'].format(
             device.mac_address, topics['env_temp'])
