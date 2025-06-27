@@ -2,8 +2,8 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [0.3.30](https://github.com/sarbuk/AirCon/compare/0.3.29...0.3.30)
-> 26 June 2025
+#### [0.3.31](https://github.com/sarbuk/AirCon/compare/0.3.29...0.3.31)
+> 27 June 2025
 
 - added additional definitions in ```__main__.py``` to expose additional topics for the following, outside of the HA climate control:
   - economy_mode [switch]
